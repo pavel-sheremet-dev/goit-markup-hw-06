@@ -189,28 +189,28 @@
                     <p class="team-list-item-work-position">Frontend Developer</p>
                     <ul class="social-list list">
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-instagram"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-twitter"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-facebook"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-linkedin"></use>
                           </svg>
@@ -227,28 +227,28 @@
                     <p class="team-list-item-work-position">Marketing</p>
                     <ul class="social-list list">
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-instagram"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-twitter"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-facebook"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-linkedin"></use>
                           </svg>
@@ -265,28 +265,28 @@
                     <p class="team-list-item-work-position">UI Designer</p>
                     <ul class="social-list list">
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-instagram"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-twitter"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-facebook"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="social-list-item">
-                        <a href="" class="social-list-link light-theme-icon-bgc">
+                        <a href="" class="social-list-link light-theme-icon-bgc link">
                           <svg class="social-icon light-theme-icon">
                             <use href="./images/icons.svg#icon-linkedin"></use>
                           </svg>
@@ -411,7 +411,7 @@
         <form class="footer-subscribe" name="subscribe-form" 
           method="GET" autocomplete="on">
           <label for="email"></label>
-          <input class="footer-subscribe-email" type="email" name="email" id="email" placeholder="E-mail">
+          <input class="footer-subscribe-email" type="email" name="email" id="email" placeholder="E-mail" required>
           <button class="footer-subscribe-btn" type="submit">Подписаться
             <svg class="subscribe-icon-send">
               <use href="./images/icons.svg#icon-send"></use>
@@ -432,9 +432,50 @@
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
+      <form class="callback-form" name="callback-form"
+      method="GET" autocomplete="on">
+        <b class="callback-form-title">Оставьте свои данные, мы вам перезвоним</b>
+        <label class="callback-form-label" for="modal-name">Имя</label>
+        <div class="form-input-wrapper">
+          <input class="callback-form-input" type="text" id="modal-name" 
+          minlength="2" maxlength="20" placeholder=" " required>
+          <svg class="form-input-icon">
+            <use href="./images/icons.svg#icon-person"></use>
+          </svg>
+        </div>
+        <label class="callback-form-label" for="modal-tel">Телефон</label>
+        <div class="form-input-wrapper">
+        <input class="callback-form-input" type="tel" id="modal-tel" 
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder=" " 
+          title="093-111-22-33" required>
+          <svg class="form-input-icon">
+            <use href="./images/icons.svg#icon-phone"></use>
+          </svg>
+        </div>
+        <label class="callback-form-label" for="modal-email">Почта</label>
+        <div class="form-input-wrapper">
+          <input class="callback-form-input" type="email" 
+          id="modal-email" placeholder=" " required>
+          <svg class="form-input-icon">
+            <use href="./images/icons.svg#icon-email"></use>
+          </svg>
+        </div>
+        <label class="callback-form-label" for="modal-comment">Комментарий</label>
+        <textarea class="callback-form-textarea"
+          id="modal-comment" placeholder="Введите текст"></textarea>
+        <label class="callback-form-policy">
+          <input class="agreement-check visually-hidden" type="checkbox" required>
+          <svg class="agreement-icon">
+            <use href="./images/icons.svg#icon-checked"></use>
+          </svg>
+          Соглашаюсь с рассылкой и принимаю&nbsp;
+          <a class="callback-form-policy-link" href="" target="_blank" rel="noopener noreferrer nofollow">Условия договора</a>
+        </label>
+        <button class="callback-form-send-btn" type="submit">Отправить</button>
+      </form>
     </div>
   </div>
-
+  
   <script src="./js/modal.js"></script>
 
 </body>

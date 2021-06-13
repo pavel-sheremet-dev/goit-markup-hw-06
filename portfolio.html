@@ -224,16 +224,13 @@
         <address id="contacts" class="page-footer-contacts">
           <ul class="page-footer-contacts-list list">
             <li class="page-footer-contacts-list-item"><a class="page-footer-contacts-list-link link"
-                href="https://goo.gl/maps/BkVQLuisvxyrpe818" target="_blank" rel="noopener noreferrer nofollow">г. Киев,
-                пр-т
+                href="https://goo.gl/maps/BkVQLuisvxyrpe818" target="_blank" rel="noopener noreferrer nofollow">г. Киев, пр-т
                 Леси Украинки, 26</a>
             </li>
-            <li class="page-footer-contacts-list-item"><a
-                class="page-footer-contacts-list-link footer-contacts-color link "
+            <li class="page-footer-contacts-list-item"><a class="page-footer-contacts-list-link footer-contacts-color link "
                 href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li class="page-footer-contacts-list-item"><a
-                class="page-footer-contacts-list-link footer-contacts-color link " href="tel:+380961111111">+38 096 111 11
-                11</a></li>
+            <li class="page-footer-contacts-list-item"><a class="page-footer-contacts-list-link footer-contacts-color link "
+                href="tel:+380961111111">+38 096 111 11 11</a></li>
           </ul>
         </address>
       </div>
@@ -241,28 +238,28 @@
         <b class="social-list-title">присоединяйтесь</b>
         <ul class="social-list footer-social-list list">
           <li class="social-list-item">
-            <a href="" class="social-list-link dark-theme-icon-bgc">
+            <a href="" class="social-list-link dark-theme-icon-bgc link">
               <svg class="social-icon dark-theme-icon">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social-list-item">
-            <a href="" class="social-list-link dark-theme-icon-bgc">
+            <a href="" class="social-list-link dark-theme-icon-bgc link">
               <svg class="social-icon dark-theme-icon">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="social-list-item">
-            <a href="" class="social-list-link dark-theme-icon-bgc">
+            <a href="" class="social-list-link dark-theme-icon-bgc link">
               <svg class="social-icon dark-theme-icon">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social-list-item">
-            <a href="" class="social-list-link dark-theme-icon-bgc">
+            <a href="" class="social-list-link dark-theme-icon-bgc link">
               <svg class="social-icon dark-theme-icon">
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
@@ -270,8 +267,21 @@
           </li>
         </ul>
       </div>
-    </div>
+      <div class="footer-form">
+        <b class="social-list-title">Подпишитесь на рассылку</b>
+        <form class="footer-subscribe" name="subscribe-form" 
+          method="GET" autocomplete="on">
+          <label for="email"></label>
+          <input class="footer-subscribe-email" type="email" name="email" id="email" placeholder="E-mail" required>
+          <button class="footer-subscribe-btn" type="submit">Подписаться
+            <svg class="subscribe-icon-send">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
 
+    </div>
   </footer>
 
 </body>

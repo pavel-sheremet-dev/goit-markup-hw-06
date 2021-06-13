@@ -15,8 +15,8 @@
   --card-border-color: #eeeeee;
   --link-icons-color: #afb1b8;
   --dark-theme-icon-bgc: rgba(255, 255, 255, 0.1);
-  --dark-theme-input-color: rgba(255, 255, 255, 0.6)
   --dark-theme-border-color: rgba(255, 255, 255, 0.3);
+  --modal-placeholder-color: rgba(117, 117, 117, 0.5);
   --logo-font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   --timing-func: cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,9 +57,13 @@ button,
 ul,
 li,
 div,
-span {
+span,
+form,
+input,
+label,
+textarea {
   outline: 1px solid yellow;
-  background-color: grey;
+  background-color: rgb(220, 220, 220);
 } */
 
 h1,
@@ -360,6 +364,8 @@ b {
   color: var(--alternate-logo-color);
 }
 
+/* footer form */
+
 .footer-form {
   margin-left: auto;
 }
@@ -391,7 +397,7 @@ b {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--footer-contacts-color);
 }
 
 .footer-subscribe-btn {
@@ -420,6 +426,8 @@ b {
   margin-left: 10px;
   fill: currentColor;
 }
+
+/* end footer form */
 
 /* ------------------------- END FOOTER ------------------------- */
 
@@ -872,11 +880,186 @@ b {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-close:focus .close-icon,
+.modal-close:hover .close-icon {
+  fill: var(--accent-color);
+}
+
 .close-icon {
   width: 10px;
   height: 10px;
   fill: var(--main-logo-color);
+  transition: fill 250ms var(--timing-func);
 }
+
+/* ------------------------- MODAL FORM ------------------------- */
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.callback-form-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--titles-text-color);
+}
+
+.callback-form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.callback-form-input,
+.callback-form-textarea {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--titles-text-color);
+}
+
+.callback-form-input {
+  height: 40px;
+  padding-left: 42px;
+  transition: border-color 250ms var(--timing-func);
+}
+
+/* визаулизация валидации */
+/* .callback-form-input:required:focus:not(:placeholder-shown):valid {
+  border-color: green;
+}
+
+.callback-form-input:required:focus:not(:placeholder-shown):invalid {
+  border-color: red;
+} */
+
+.callback-form-textarea {
+  margin-bottom: 20px;
+  resize: none;
+  min-height: 120px;
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  transition: border-color 250ms var(--timing-func);
+}
+
+.callback-form-input:focus,
+.callback-form-textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.callback-form-input:focus + .form-input-icon {
+  fill: var(--accent-color);
+}
+
+.callback-form-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--modal-placeholder-color);
+}
+
+.form-input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-input-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--titles-text-color);
+  transition: fill 250ms var(--timing-func);
+}
+
+.callback-form-policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+.agreement-icon {
+  margin-right: 7px;
+  border-radius: 2px;
+  border: 2px solid var(--titles-text-color);
+  cursor: pointer;
+  width: 16px;
+  height: 15px;
+  background-size: contain;
+  fill: var(--alternate-logo-color);
+}
+
+.agreement-check:not(:checked):focus + .agreement-icon {
+  outline: 1px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.agreement-check:focus + .agreement-icon {
+  outline: 1px solid var(--titles-text-color);
+  outline-offset: 2px;
+}
+
+/* Альтернативный способ подсветки чекбокса при фокусе */
+/* .callback-form-policy:focus-within {
+  outline: 1px solid var(--accent-color);
+} */
+
+.agreement-check:checked + .agreement-icon {
+  background-color: var(--accent-color);
+  border: none;
+  transform: rotate(360deg);
+}
+
+.callback-form-policy-link {
+  color: var(--accent-color);
+}
+
+.callback-form-send-btn {
+  align-self: center;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--alternate-logo-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms var(--timing-func);
+}
+
+.callback-form-send-btn:hover,
+.callback-form-send-btn:focus {
+  background-color: var(--hover-modal-btn-color);
+}
+
+/* ------------------------- END MODAL FORM ------------------------- */
 
 /* ------------------------- END MODAL WINDOW ------------------------- */
 
