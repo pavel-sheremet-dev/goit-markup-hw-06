@@ -387,12 +387,6 @@ b {
   color: var(--alternate-logo-color);
 }
 
-.footer-subscribe-btn:hover,
-.footer-subscribe-btn:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: var(--hover-modal-btn-color);
-}
-
 .footer-subscribe-email::placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -415,9 +409,15 @@ b {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--alternate-logo-color);
   background-color: var(--accent-color);
+  transition: background-color 250ms var(--timing-func);
+}
+
+.footer-subscribe-btn:hover,
+.footer-subscribe-btn:focus {
+  background-color: var(--hover-modal-btn-color);
 }
 
 .subscribe-icon-send {
